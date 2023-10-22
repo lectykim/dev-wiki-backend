@@ -1,1 +1,26 @@
 rootProject.name = 'backend'
+include 'core-web', 'storage-rdbms', 'domain-devwiki', 'api-devwiki'
+
+rootProject.children.each {
+    if (it.name.startsWith('core')) {
+        it.projectDir = file("core/${it.name}")
+    }
+}
+
+rootProject.children.each {
+    if(it.name.startsWith("storage")) {
+        it.projectDir = file("storage/${it.name}")
+    }
+}
+
+rootProject.children.each {
+    if(it.name.startsWith("domain")) {
+        it.projectDir = file("domain/${it.name}")
+    }
+}
+
+rootProject.children.each {
+    if(it.name.startsWith("api")) {
+        it.projectDir = file("api/${it.name}")
+    }
+}
