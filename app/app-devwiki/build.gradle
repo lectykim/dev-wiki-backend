@@ -1,0 +1,8 @@
+dependencies {
+    implementation project(':domain-devwiki')
+    implementation project(':storage-rdbms')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
