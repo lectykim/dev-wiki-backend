@@ -13,7 +13,7 @@ services:
     image: mysql:8
     restart: always
     environment:
-      MYSQL_DATABASE: dev-wiki
+      MYSQL_DATABASE: dev_wiki
       MYSQL_ROOT_PASSWORD: 1234
     ports:
       - "3306:3306"
